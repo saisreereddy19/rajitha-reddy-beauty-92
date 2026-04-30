@@ -33,7 +33,7 @@ export const Route = createRootRoute({
       { name: "description", content: "Rajitha Reddy is a professional makeup artist in Hyderabad and Kukatpally with 15+ years of bridal, party, HD makeup, and saree draping experience." },
       { name: "author", content: "Rajitha Reddy Makeup Artist" },
       { property: "og:title", content: "Rajitha Reddy Makeup Artist" },
-      { property: "og:description", content: "Premium bridal makeup in Hyderabad, party makeup, engagement makeup, HD makeup, and saree draping by Rajitha Reddy." },
+      { property: "og:description", content: "Premium bridal makeup in Hyderabad, party makeup, Hairstylist , HD makeup, and saree draping by Rajitha Reddy." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@rajitha_makeup_artist1" },

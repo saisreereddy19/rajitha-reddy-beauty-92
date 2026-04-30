@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bridalImage from "../assets/rajitha-bridal-makeup.jpg";
+import bridalImage from "../assets/hero-bridal.jpg";
 import partyImage from "../assets/rajitha-party-makeup.jpg";
-import transformationImage from "../assets/rajitha-transformation.jpg";
+import galleryBridalImage from "../assets/red-bridal.jpg";
 import studioImage from "../assets/rajitha-studio.jpg";
 
 const instagramUrl = "https://www.instagram.com/rajitha_makeup_artist1/";
@@ -10,14 +10,14 @@ const instagramUrl = "https://www.instagram.com/rajitha_makeup_artist1/";
 const services = [
   ["Bridal Makeup", "Elegant South Indian bridal looks crafted for ceremony lights, photography, and all-day confidence."],
   ["Party Makeup", "Soft glam, smoky eyes, and radiant finishes for birthdays, receptions, and evening events."],
-  ["Engagement Makeup", "Refined, camera-ready beauty that feels romantic, fresh, and personal to your style."],
+  ["Hairstylist ", "Refined, camera-ready beauty that feels romantic, fresh, and personal to your style."],
   ["HD Makeup", "Seamless skin work and premium products designed for close-up photos and flawless wear."],
   ["Saree Draping", "Graceful draping with secure pleats and a polished finish for weddings and special occasions."],
 ];
 
-const reasons = ["15+ Years Experience", "Premium Products Used", "Personalized Looks", "Client Satisfaction"];
+const reasons = ["15+ Years Experience", "Only International and Premium Products Used", "Available to travel anywhere for bridal makeup", "Client Satisfaction"];
 
-const testimonials = [
+const Reviews = [
   ["Priya", "Rajitha made my bridal look so graceful and natural. The makeup stayed perfect through the entire wedding."],
   ["Sneha", "Very professional, calm, and punctual. I loved the HD finish and received so many compliments."],
   ["Kavya", "She understood exactly what I wanted for my engagement and created a soft, elegant look."],
@@ -25,10 +25,9 @@ const testimonials = [
 ];
 
 const gallery = [
-  [bridalImage, "South Indian bridal makeup by Rajitha Reddy"],
+  [bridalImage, "Pink bridal makeup look by Rajitha Reddy"],
   [partyImage, "Party makeup with soft smoky eyes and nude pink tones"],
-  [transformationImage, "Before and after HD makeup transformation"],
-  [studioImage, "Premium makeup studio environment"],
+  [galleryBridalImage, "Traditional red bridal makeup with heavy jewelry"],
 ];
 
 export const Route = createFileRoute("/")({
@@ -38,11 +37,11 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Book Rajitha Reddy Makeup Artist for bridal makeup in Hyderabad, professional makeup artist Kukatpally, HD makeup, party makeup, engagement makeup, and saree draping.",
+          "Book Rajitha Reddy Makeup Artist for bridal, HD makeup, party makeup, Hairstylist , and saree draping.",
       },
-      { name: "keywords", content: "Makeup Artist near me, Bridal Makeup in Hyderabad, Professional Makeup Artist Kukatpally, Rajitha Reddy Makeup Artist" },
+      { name: "keywords", content: "Makeup Artist near me, Bridal Makeup in Hyderabad, Professional Makeup Artist, Rajitha Reddy Makeup Artist" },
       { property: "og:title", content: "Rajitha Reddy Makeup Artist | Hyderabad" },
-      { property: "og:description", content: "Luxury bridal, party, engagement, HD makeup, and saree draping in Hyderabad / Kukatpally with 15+ years of experience." },
+      { property: "og:description", content: "Luxury bridal, party, engagement, HD makeup, and saree draping in Hyderabad with 15+ years of experience." },
       { property: "og:image", content: bridalImage },
       { name: "twitter:image", content: bridalImage },
     ],
@@ -57,7 +56,7 @@ export const Route = createFileRoute("/")({
           url: "https://www.instagram.com/rajitha_makeup_artist1/",
           sameAs: [instagramUrl],
           description:
-            "Professional makeup artist serving Hyderabad and Kukatpally with 15+ years of experience in bridal makeup, party makeup, HD makeup, engagement makeup, and saree draping.",
+            "Professional makeup artist serving Hyderabad and Kukatpally with 15+ years of experience in bridal makeup, party makeup, HD makeup, Hairstylist , and saree draping.",
           areaServed: ["Hyderabad", "Kukatpally"],
           priceRange: "$$$",
           makesOffer: services.map(([name, description]) => ({
@@ -112,7 +111,7 @@ function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,var(--blush),transparent_28%),radial-gradient(circle_at_80%_10%,var(--champagne),transparent_24%)] opacity-55" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-10 md:min-h-[calc(100vh-6rem)] md:grid-cols-[1fr_0.92fr] md:px-8">
           <div className="animate-soft-rise">
-            <p className="mb-5 inline-flex rounded-full border border-gold/50 bg-ivory/70 px-4 py-2 text-sm font-bold text-rose-deep shadow-soft">Professional Makeup Artist · Hyderabad / Kukatpally</p>
+            <p className="mb-5 inline-flex rounded-full border border-gold/50 bg-ivory/70 px-4 py-2 text-sm font-bold text-rose-deep shadow-soft">Professional Makeup Artist · Hyderabad</p>
             <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.02] text-foreground text-balance md:text-7xl">Enhancing Your Natural Beauty</h1>
             <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-muted-foreground md:text-xl">Professional Makeup Artist with 15+ Years of Experience</p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -141,10 +140,11 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[0.9fr_1.1fr]">
           <img src={studioImage} alt="Luxury makeup studio with premium beauty products" width={1536} height={1152} loading="lazy" className="aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-luxury" />
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.28em] text-primary">About Rajitha</p>
-            <h2 id="about-title" className="mt-3 font-display text-4xl font-bold md:text-5xl">Trusted beauty artistry with a calm, premium touch.</h2>
-            <p className="mt-6 text-lg leading-9 text-muted-foreground">Rajitha Reddy brings over 15 years of professional makeup and beauty service experience to every client. Her approach blends refined technique, premium products, and a careful understanding of each person’s natural features, creating looks that feel elegant, comfortable, and photo-ready.</p>
-            <p className="mt-4 text-lg leading-9 text-muted-foreground">Serving clients across Hyderabad and Kukatpally, Rajitha is known for professionalism, patience, hygiene, and dependable results for weddings, engagements, parties, and special occasions.</p>
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-primary">ABOUT THE FOUNDER & CEO</p>
+            <h2 id="about-title" className="mt-3 font-display text-4xl font-bold md:text-5xl">Beauty artistry built on passion, trust, and experience.</h2>
+            <p className="mt-6 text-lg leading-9 text-muted-foreground">Hi, I’m Rajitha Reddy, Founder & CEO of Rajitha Makeup Artist. With over 15 years of professional experience in the beauty industry, I started this journey with a simple vision to help every client feel confident, elegant, and comfortable in their own skin.</p>
+            <p className="mt-4 text-lg leading-9 text-muted-foreground">As a founder, my goal has always been to create a space where clients feel relaxed, cared for, and truly understood. Every bridal look, party makeover, or special occasion styling is approached with patience, attention to detail, and a commitment to quality.</p>
+            <p className="mt-4 text-lg leading-9 text-muted-foreground">Based in Hyderabad I’m proud to have earned the trust of countless clients who return not only for the results, but for the experience itself.</p>
           </div>
         </div>
       </section>
@@ -163,12 +163,20 @@ function Index() {
       </section>
 
       <section id="gallery" className="px-5 py-20 md:px-8">
-        <SectionHeader eyebrow="Gallery" title="Soft glam, bridal glow, polished transformations" copy="A portfolio-style glimpse of natural, feminine, high-end looks for local clients searching for a makeup artist near me." />
-        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-4">
+        <SectionHeader eyebrow="Gallery" title="Soft glam, bridal glow, polished transformations" copy="A portfolio-style glimpse of natural, feminine, high-end looks for  clients searching for a makeup artist near me." />
+        <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-1 md:grid-cols-3">
           {gallery.map(([src, alt], index) => (
-            <figure key={alt} className={`${index > 1 ? "md:col-span-2" : ""} group overflow-hidden rounded-[1.75rem] bg-card shadow-soft`}>
-              <img src={src} alt={alt} width={index > 1 ? 1536 : 1344} height={index > 1 ? 1152 : 1536} loading={index === 0 ? "eager" : "lazy"} className="h-full min-h-80 w-full object-cover transition duration-700 group-hover:scale-105" />
-            </figure>
+            <div key={alt} className="group relative overflow-hidden rounded-[2rem] bg-card shadow-luxury transition-all duration-500 hover:-translate-y-2 hover:shadow-soft">
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <img
+                  src={src}
+                  alt={alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -186,9 +194,9 @@ function Index() {
       </section>
 
       <section id="reviews" className="px-5 py-20 md:px-8">
-        <SectionHeader eyebrow="Testimonials" title="Loved by local clients" copy="Realistic client feedback reflecting the care, finish, and trust Rajitha brings to every appointment." />
+        <SectionHeader eyebrow="Reviews " title="Loved by  clients" copy="Realistic client feedback reflecting the care, finish, and trust Rajitha brings to every appointment." />
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-4">
-          {testimonials.map(([name, review]) => (
+          {Reviews.map(([name, review]) => (
             <blockquote key={name} className="rounded-[1.4rem] border border-border bg-card p-6 shadow-soft">
               <p className="text-gold">★★★★★</p>
               <p className="mt-5 leading-8 text-muted-foreground">“{review}”</p>
@@ -202,7 +210,7 @@ function Index() {
         <div className="mx-auto max-w-5xl rounded-[2rem] bg-hero-luxury p-8 text-center shadow-luxury md:p-14">
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-primary">Instagram inquiries only</p>
           <h2 className="mt-4 font-display text-4xl font-bold md:text-6xl">Ready for your signature look?</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Message Rajitha Reddy Makeup Artist on Instagram for bridal makeup in Hyderabad, professional makeup artist Kukatpally, party makeup, and saree draping bookings.</p>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Message Rajitha Reddy Makeup Artist on Instagram for bridal makeup, party makeup, and saree draping bookings.</p>
           <a href={instagramUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-luxury px-8 py-4 text-base font-extrabold text-primary-foreground shadow-luxury transition-transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background">
             <InstagramIcon /> Message on Instagram
           </a>
